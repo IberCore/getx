@@ -301,7 +301,7 @@ class GetHttpClient {
     final uri = _createUri(url, query);
 
     return Request<T>(
-      method: 'DELETE',
+      method: 'delete',
       url: uri,
       headers: headers,
       decoder: decoder ?? (defaultDecoder as Decoder<T>?),
@@ -322,7 +322,7 @@ class GetHttpClient {
       var response = await _performRequest<T>(
         () => _request<T>(
           url,
-          'PATCH',
+          'patch',
           contentType: contentType,
           body: body,
           query: query,
@@ -356,7 +356,7 @@ class GetHttpClient {
       var response = await _performRequest<T>(
         () => _request<T>(
           url,
-          'POST',
+          'post',
           contentType: contentType,
           body: body,
           query: query,
@@ -423,7 +423,7 @@ class GetHttpClient {
       var response = await _performRequest<T>(
         () => _request<T>(
           url,
-          'PUT',
+          'put',
           contentType: contentType,
           query: query,
           body: body,
