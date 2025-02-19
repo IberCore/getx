@@ -260,7 +260,7 @@ class GetHttpClient {
     final uri = _createUri(url, query);
 
     return Future.value(Request<T>(
-      method: 'GET',
+      method: 'get',
       url: uri,
       headers: headers,
       decoder: decoder ?? (defaultDecoder as Decoder<T>?),
